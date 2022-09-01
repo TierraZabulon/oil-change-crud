@@ -26,8 +26,8 @@ MongoDB/Express/Node.JS web application using MVC Architecture and local authori
 PORT = 2121 (can be any port, like 3000) 
 DB_STRING = mongodb+srv://... (your database URI connection string from MondoDB Atlas)
 ```
--- [How to Get Connection String](https://www.mongodb.com/docs/guides/atlas/connection-string/)
-- insure `.env` is within .gitignore to avoid sharing this private information
+_[How to Get Connection String](https://www.mongodb.com/docs/guides/atlas/connection-string/)_
+- ensure `.env` is within .gitignore to avoid sharing this private information
 
 ## Work on Issues
 1. Check out the [Issues](https://github.com/TierraZabulon/oil-change-crud/issues) and assign yourself the one you will be working on (create one if it doesn't exist).
