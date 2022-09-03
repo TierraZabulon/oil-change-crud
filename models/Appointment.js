@@ -1,15 +1,21 @@
 const mongoose = require("mongoose");
 
 const AppointmentSchema = new mongoose.Schema({
-  appointmentDate: {
-    type: Date,
-    required: true,
-  },
-  completed: {
-    type: Boolean,
+  date: {
+    type: String,
     required: true,
   },
   userId: {
+    type: String,
+    required: true,
+  },
+  options: {
+    type: String,
+    required: true,
+    enum: ["Standard", "Premium", "VIP"],
+    default: "Standard",
+  },
+  carId: {
     type: String,
     required: true,
   },

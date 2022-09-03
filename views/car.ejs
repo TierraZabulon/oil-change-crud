@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Cars</h1>
+    <ul>
+      <% cars.forEach( el => { %>
+      <li class="todoItem" data-id="<%=el._id%>">
+        <span class=""
+          ><%= el.carMake %> <%= el.carModel %> <%= el.carYear %></span
+        >
+        <span class="del"> Delete </span>
+      </li>
+      <% }) %>
+    </ul>
+
+    <form action="/car/createCar" method="POST">
+      <input type="text" placeholder="Enter Car Model" name="carModel" />
+      <input type="text" placeholder="Enter Car Make" name="carMake" />
+      <input type="number" placeholder="Enter Car Year" name="carYear" />
+      <input type="submit" />
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

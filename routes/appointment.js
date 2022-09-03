@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const appointmentsController = require("../controllers/todos");
+const appointmentController = require("../controllers/appointment");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
-router.get("/", ensureAuth, appointmentsController.getTodos);
+router.get("/", ensureAuth, appointmentController.getAppointments);
 
-router.post("/createTodo", appointmentsController.createTodo);
+router.post("/createAppointment", appointmentController.createAppointment);
 
-router.put("/markComplete", appointmentsController.markComplete);
+// router.put('/changeAppointmentCar', appointmentController.changeAppointmentCar)
 
-router.put("/markIncomplete", appointmentsController.markIncomplete);
+// router.put('/changeAppointmentType', appointmentController.changeAppointmentType)
 
-router.delete("/deleteTodo", appointmentsController.deleteTodo);
+router.delete("/deleteAppointment", appointmentController.deleteAppointment);
 
 module.exports = router;

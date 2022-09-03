@@ -9,7 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-const todoRoutes = require("./routes/car");
+// const todoRoutes = require("./routes/car");
 const carRoutes = require("./routes/car");
 
 require("dotenv").config({ path: "./config/.env" });
