@@ -7,6 +7,6 @@ router.get("/", ensureAuth, carController.getCars);
 
 router.post("/createCar", carController.createCar);
 
-// router.delete('/deleteCar', carController.deleteCar)
+router.delete("/deleteCar", carController.deleteCar);
 
 module.exports = router;

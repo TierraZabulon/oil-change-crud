@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Cars</h1>
+    <h1>Appointments</h1>
     <ul>
-      <% cars.forEach( el => { %>
+      <% appointments.forEach( el => { %>
       <li class="todoItem" data-id="<%=el._id%>">
         <span class=""
-          ><%= el.carMake %> <%= el.carModel %> <%= el.carYear %></span
+          ><%= el.carMake %> <%= el.appointmentDate %> <%= el.carYear %></span
         >
+        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
         <span class="del"> Delete </span> <a href="/appointment">appointment</a>
       </li>
       <% }) %>
     </ul>
 
-    <form action="/car/createCar" method="POST">
-      <input type="text" placeholder="Enter Car Model" name="carModel" />
+    <form action="/appointment/createAppointment" method="POST">
+      <input type="date" placeholder="" name="appointmentDate" />
       <input type="text" placeholder="Enter Car Make" name="carMake" />
       <input type="number" placeholder="Enter Car Year" name="carYear" />
       <input type="submit" />
     </form>
-
+    <a href="/car">Back</a>
     <a href="/logout">Logout</a>
 
     <script src="js/main.js"></script>
