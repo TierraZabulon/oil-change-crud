@@ -11,6 +11,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 // const todoRoutes = require("./routes/car");
 const carRoutes = require("./routes/car");
+const appointmentRoutes = require("./routes/appointment");
 
 require("dotenv").config({ path: "./config/.env" });
 
@@ -42,6 +43,7 @@ app.use(flash());
 
 app.use("/", mainRoutes);
 app.use("/car", carRoutes);
+app.use("/appointment", appointmentRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");

@@ -51,14 +51,14 @@ module.exports = {
   //         console.log(err)
   //     }
   // },
-  // deleteCar: async (req, res)=>{
-  //     console.log(req.body.todoIdFromJSFile)
-  //     try{
-  //         await Todo.findOneAndDelete({_id:req.body.todoIdFromJSFile})
-  //         console.log('Deleted Car')
-  //         res.json('Deleted It')
-  //     }catch(err){
-  //         console.log(err)
-  // //     }
-  ////  }
+  deleteCar: async (req, res) => {
+    console.log(req.body.todoIdFromJSFile);
+    try {
+      await Car.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
+      console.log("Deleted Car");
+      res.json("Deleted It");
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };

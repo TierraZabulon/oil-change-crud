@@ -11,6 +11,6 @@ router.post("/createAppointment", appointmentController.createAppointment);
 
 // router.put('/changeAppointmentType', appointmentController.changeAppointmentType)
 
-router.delete("/deleteAppointment", appointmentController.deleteAppointment);
+// router.delete("/deleteAppointment", appointmentController.deleteAppointment);
 
 module.exports = router;
