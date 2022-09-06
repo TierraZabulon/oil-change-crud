@@ -5,6 +5,8 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 router.get("/", ensureAuth, appointmentController.getAppointments);
 
+router.get("/createAppointment", appointmentController.appointmentForm)
+
 router.post("/createAppointment", appointmentController.createAppointment);
 
 // router.put('/changeAppointmentCar', appointmentController.changeAppointmentCar)

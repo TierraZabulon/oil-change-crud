@@ -15,7 +15,7 @@
         <span class=""
           ><%= el.carMake %> <%= el.carModel %> <%= el.carYear %></span
         >
-        <span class="del"> Delete </span> <a href="/appointment">appointment</a>
+        <span class="del"> Create </span> <a href="/appointment/createAppointment?carId=<%=el._id%>&carMake=<%=el.carMake%>&carModel=<%= el.carModel %>&carYear=<%= el.carYear %>">appointment</a>
       </li>
       <% }) %>
     </ul>
