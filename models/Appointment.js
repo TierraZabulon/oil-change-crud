@@ -5,6 +5,10 @@ const AppointmentSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  time: {
+    type: String,
+    required: true,
+  },
   userId: {
     type: String,
     required: true,

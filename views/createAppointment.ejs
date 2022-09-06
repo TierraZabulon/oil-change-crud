@@ -10,18 +10,6 @@
   <body>
     <h1>Appointments</h1>
     <h2><%= carMake %> <%= carModel %> <%= carYear %></h2>
-    <ul>
-      <% appointments.forEach( el => { %>
-
-      <li class="todoItem" data-id="<%=el._id%>">
-        <span class=""
-          ><%= el.date %> <%= el.options %> </span
-        >
-        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-        <span class="del"> Delete </span> 
-      </li>
-      <% }) %>
-    </ul>
 
     <form action="/appointment/createAppointment" method="POST">
       <input type="date" placeholder="" name="appointmentDate" />
